@@ -1,0 +1,56 @@
+﻿This data represents almost a million insurance records and the task is to predict a transformed ratio of loss to total insured value (called "target" within the data set). The provided features contain policy characteristics, information on crime rate, geodemographics, and weather.
+
+The train and test sets are split randomly. For each id in the test set, you must predict the target using the provided features.
+
+
+
+Data Fields
+================
+id : A unique identifier of the data set
+
+target : The transformed ratio of loss to total insured value
+
+dummy : Nuisance variable used to control the model, but not working as a predictor
+
+var1 – var17 : A set of normalized variables representing policy characteristics (note: var11 is the weight used in the weighted gini score calculation)
+
+crimeVar1 – crimeVar9: A set of normalized Crime Rate variables
+
+geodemVar1 – geodemVar37 : A set of normalized geodemographic variables
+
+weatherVar1 – weatherVar236 : A set of normalized weather station variables
+
+
+Data Type
+===============
+Categorical Variable Name	Variable Type	Possible Values
+var1				Ordinal		1, 2, 3, 4, 5, Z*
+var2				Nominal		A, B, C, Z*
+var3				Ordinal		1, 2, 3, 4, 5, 6, Z*
+var4+				Nominal		A1, B1, C1, D1, D2, D3, D4, E1, E2, E3, E4, E5, E6, F1, G1, G2, H1, H2, H3, I1, J1, J2, J3, J4, J5, J6, K1, L1, M1, N1, O1, O2, P1, R1, R2, R3, R4, R5, R6, R7, R8, S1, Z*
+var5				Nominal		A, B, C, D, E, F, Z*
+var6				Nominal		A, B, C, Z*
+var7				Ordinal		1, 2, 3, 4, 5, 6, 7, 8, Z*
+var8				Ordinal		1, 2, 3, 4, 5, 6, Z*
+var9				Nominal		A, B, Z*
+dummy				Nominal		A, B
+
+* : Level "Z" in these variable represents a missing value. Missing values elsewhere in the data are denoted with NA
+
++: Levels for var4 are in a hierarchical structure. The letter represents higher level and the number following the letter represents lower level nested within the higher level.
+
+
+Numeric Variable Name		Variable Type
+target				Continuous
+id				Discrete
+var10				Continuous
+var11				Continuous
+var12				Continuous
+var13				Continuous
+var14				Continuous
+var15				Continuous
+var16				Continuous
+var17				Continuous
+crimeVar1 – crimeVar9		Continuous
+geoDemVar1 – geoDemVar37	Continuous
+weatherVar1 – weatherVar236	Continuous

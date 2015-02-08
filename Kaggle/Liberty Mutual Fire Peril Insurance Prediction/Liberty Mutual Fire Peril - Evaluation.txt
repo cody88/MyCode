@@ -1,0 +1,20 @@
+﻿Evaluation
+================
+Submissions are evaluated on the normalized, weighted Gini coefficient. The weights used in the calculation are represented by var11 in the dataset.
+
+To calculate the normalized weighted Gini, your predictions are sorted from largest to smallest. This is the only step where the explicit prediction values are used (i.e. only the order of your predictions matters).  We then move from largest to smallest, asking "In the leftmost x% of the data, how much of the actual observed, weighted loss (the target multiplied by the provided weight) have you accumulated?" With no model, you expect to accumulate 10% of the loss in 10% of the predictions, so no model (or a "null" model) achieves a straight line. The area between your curve and this straight line the Gini coefficient.
+
+There is a maximum achievable area for a perfect model. The normalized Gini is obtained by dividing the weighted Gini coefficient of your model by the weighted Gini coefficient of a perfect model.
+
+
+
+
+Submission File
+================
+For each id in the test set, predict the value of the target variable. Your submission file must have a header and should look like the following:
+
+id,target
+10,0
+11,1.2
+14,0.3
+...
